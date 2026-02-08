@@ -1,12 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import Header from "./components/layout/Header/Header";
+import { useIsTablet } from "./hooks/useMediaQuery";
 
-function App() {
+function App() {  
   return (
     <>
       <BrowserRouter>
-        <Header showNab={true} showUserMenu={true} />
+        <Header showNav={true} showUserMenu={true} />
       </BrowserRouter>
     </>
   );
