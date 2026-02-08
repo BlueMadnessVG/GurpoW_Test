@@ -1,0 +1,43 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navigation_list {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation_item {
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .navigation {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navigation {
+    gap: 1.5rem;
+  }
+  
+  .navigation_list {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navigation {
+    gap: 2rem; 
+  }
+  
+  .navigation_list {
+    gap: 3rem; 
+  }
+}

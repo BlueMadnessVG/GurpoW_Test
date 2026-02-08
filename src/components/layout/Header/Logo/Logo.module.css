@@ -1,0 +1,20 @@
+.logo_image {
+  height: clamp(55px, 8vw, 65px);
+  width: auto;
+  margin-top: clamp(2rem, 3vw, 2rem);
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .logo_image {
+    height: clamp(55px, 6vw, 55px);
+    margin-top: clamp(2rem, 2.5vw, 1.5rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo_image {
+    height: 55px;
+    margin-top: 2rem;
+  }
+}

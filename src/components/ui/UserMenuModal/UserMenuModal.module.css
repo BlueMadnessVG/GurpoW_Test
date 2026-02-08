@@ -1,0 +1,204 @@
+/* src/components/modals/UserMenuModal/UserMenuModal.module.css */
+
+.userMenuModal__Container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100vh;
+  background: #000000;
+  padding: 1.5rem;
+  z-index: 1000;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  border-left: 2px solid #ff0000;
+}
+
+.userMenuModal__Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #333333;
+}
+
+.userMenuModal__UserInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userMenuModal__Avatar {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  border: 2px solid white;
+}
+
+.userMenuModal__UserName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 0.25rem 0;
+}
+
+.userMenuModal__UserEmail {
+  font-size: 0.875rem;
+  color: #cccccc;
+  margin: 0;
+}
+
+.userMenuModal__CloseButton {
+  background: #222222;
+  border: 1px solid #ff0000;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
+.userMenuModal__CloseButton:hover {
+  background: #ff0000;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.userMenuModal__Nav {
+  flex: 1;
+}
+
+.userMenuModal__NavList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.userMenuModal__NavItem {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  border: 1px solid #333333;
+}
+
+.userMenuModal__NavItem:hover {
+  background-color: #1a1a1a;
+  border-color: #ff0000;
+  transform: translateX(5px);
+}
+
+.userMenuModal__Link,
+.userMenuModal__Button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.userMenuModal__Link:hover,
+.userMenuModal__Button:hover {
+  color: #ffffff;
+}
+
+.userMenuModal__LinkActive {
+  color: #ffffff;
+  background-color: #ff0000;
+  border-left: 4px solid #ffffff;
+}
+
+.userMenuModal__Icon {
+  font-size: 1.25rem;
+  width: 24px;
+  text-align: center;
+}
+
+.userMenuModal__Label {
+  flex: 1;
+}
+
+.userMenuModal__Button {
+  color: #ff0000;
+  font-weight: 600;
+}
+
+.userMenuModal__Button:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.userMenuModal__Footer {
+  padding-top: 1.5rem;
+  border-top: 2px solid #333333;
+  text-align: center;
+}
+
+.userMenuModal__Version {
+  font-size: 0.75rem;
+  color: #666666;
+  margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .userMenuModal__Container {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .userMenuModal__Container {
+    width: 100vw;
+    border-left: none;
+    border-top: 2px solid #ff0000;
+  }
+
+  .userMenuModal__Header {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.userMenuModal__Container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.userMenuModal__Container::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.userMenuModal__Container::-webkit-scrollbar-thumb {
+  background: #ff0000;
+  border-radius: 4px;
+}
+
+.userMenuModal__Container::-webkit-scrollbar-thumb:hover {
+  background: #cc0000;
+}
