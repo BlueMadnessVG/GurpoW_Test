@@ -1,0 +1,12 @@
+.carInfoSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 12px;
+}
+
+@media (min-width: 768px) {
+  .carInfoSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
