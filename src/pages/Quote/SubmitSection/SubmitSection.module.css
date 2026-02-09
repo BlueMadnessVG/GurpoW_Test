@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 16px;
+  flex-wrap: wrap;
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkboxItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #374151;
+  cursor: pointer;
+}
+
+.checkboxItem input {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #9ca3af;
+  accent-color: #ef4444;
+  cursor: pointer;
+}
+
+.submitButton {
+  padding: 12px 32px;
+  border: 1px solid #ef4444;
+  background: transparent;
+  font-size: 12px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  color: #111827;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: #ef4444;
+  color: white;
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
