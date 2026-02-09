@@ -46,41 +46,6 @@ export const CAR_CONDITIONS = [
   { id: "used", value: CarCondition.USED, label: "Usado" },
 ];
 
-export const MEXICAN_STATES = [
-  { id: "ags", value: "Aguascalientes", label: "Aguascalientes" },
-  { id: "bc", value: "Baja California", label: "Baja California" },
-  { id: "bcs", value: "Baja California Sur", label: "Baja California Sur" },
-  { id: "camp", value: "Campeche", label: "Campeche" },
-  { id: "chis", value: "Chiapas", label: "Chiapas" },
-  { id: "chih", value: "Chihuahua", label: "Chihuahua" },
-  { id: "cdmx", value: "Ciudad de México", label: "Ciudad de México" },
-  { id: "coah", value: "Coahuila", label: "Coahuila" },
-  { id: "col", value: "Colima", label: "Colima" },
-  { id: "dur", value: "Durango", label: "Durango" },
-  { id: "gto", value: "Guanajuato", label: "Guanajuato" },
-  { id: "gro", value: "Guerrero", label: "Guerrero" },
-  { id: "hgo", value: "Hidalgo", label: "Hidalgo" },
-  { id: "jal", value: "Jalisco", label: "Jalisco" },
-  { id: "mex", value: "Estado de México", label: "Estado de México" },
-  { id: "mich", value: "Michoacán", label: "Michoacán" },
-  { id: "mor", value: "Morelos", label: "Morelos" },
-  { id: "nay", value: "Nayarit", label: "Nayarit" },
-  { id: "nl", value: "Nuevo León", label: "Nuevo León" },
-  { id: "oax", value: "Oaxaca", label: "Oaxaca" },
-  { id: "pue", value: "Puebla", label: "Puebla" },
-  { id: "qro", value: "Querétaro", label: "Querétaro" },
-  { id: "qroo", value: "Quintana Roo", label: "Quintana Roo" },
-  { id: "slp", value: "San Luis Potosí", label: "San Luis Potosí" },
-  { id: "sin", value: "Sinaloa", label: "Sinaloa" },
-  { id: "son", value: "Sonora", label: "Sonora" },
-  { id: "tab", value: "Tabasco", label: "Tabasco" },
-  { id: "tamps", value: "Tamaulipas", label: "Tamaulipas" },
-  { id: "tlax", value: "Tlaxcala", label: "Tlaxcala" },
-  { id: "ver", value: "Veracruz", label: "Veracruz" },
-  { id: "yuc", value: "Yucatán", label: "Yucatán" },
-  { id: "zac", value: "Zacatecas", label: "Zacatecas" },
-];
-
 export const DISTRIBUTORS = [
   {
     id: "dist-1",
@@ -150,5 +115,4 @@ export const DOWN_PAYMENT_OPTIONS = [
   { id: "30%", value: 30, label: "30%", type: "percentage" },
   { id: "40%", value: 40, label: "40%", type: "percentage" },
   { id: "50%", value: 50, label: "50%", type: "percentage" },
-  { id: "other", value: null, label: "Otro monto", type: "custom" },
 ];

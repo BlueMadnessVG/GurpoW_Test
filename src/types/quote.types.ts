@@ -40,11 +40,11 @@ export interface QuoteFormData {
 
     // Payment Information
     paymentMethod: typeof PaymentMethod[keyof typeof PaymentMethod];
-    downPayment: number | null;
-    creditTerm: typeof CreditTerm[keyof typeof CreditTerm] | null;
+    downPayment?: string | null;
+    creditTerm?: typeof CreditTerm[keyof typeof CreditTerm] | null;
 
     // Comments
-    comments: string;
+    comments?: string;
 
     // Terms
     privacyPolicyAccepted: boolean;

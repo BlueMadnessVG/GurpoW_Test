@@ -36,7 +36,7 @@ body {
   color: var(--black);
 }
 
-h1, h2, h3, h4, .heading-primary {
+h1, h2 {
   font-family: var(--font-secondary);
   font-weight: var(--font-weight-bold);
   line-height: var(--leading-tight);
@@ -48,38 +48,4 @@ h1 {
 
 h2 {
   font-size: var(--text-3xl);
-}
-
-h3 {
-  font-size: var(--text-2xl);
-}
-
-h4 {
-  font-size: var(--text-xl);
-}
-
-.text-display {
-  font-family: var(--font-secondary);
-  font-weight: var(--font-weight-black);
-  font-size: var(--text-5xl);
-  line-height: 1.1;
-}
-
-.text-caption {
-  font-family: var(--font-primary);
-  font-size: var(--text-sm);
-  color: var(--gray-600);
-}
-
-.text-uppercase {
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-wide);
-}
-
-.button-text {
-  font-family: var(--font-primary);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--text-sm);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-wide);
 }

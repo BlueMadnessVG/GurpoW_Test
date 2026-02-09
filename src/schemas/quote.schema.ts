@@ -33,12 +33,6 @@ const carInfoSchema = v.object({
     "Por favor selecciona una condición válida",
   ),
 
-  carState: v.pipe(
-    v.string(),
-    v.nonEmpty("Por favor selecciona un estado"),
-    v.maxLength(100, "El estado no puede exceder los 100 caracteres"),
-  ),
-
   distributor: v.pipe(
     v.string(),
     v.nonEmpty("Por favor selecciona un distribuidor"),
@@ -103,7 +97,14 @@ const paymentInfoSchema = v.object({
 
   downPayment: v.optional(
     v.nullable(
-      v.pipe(v.number(), v.minValue(0, "El enganche no puede ser negativo")),
+      v.pipe(
+        v.string(),
+        v.nonEmpty("El enganche es requerido"),
+        v.regex(
+          /^\d{1,3}(,\d{3})*(\.\d{2})?$/,
+          "Formato inválido. Ej: 80,000.00",
+        )
+      ),
     ),
   ),
 
@@ -135,11 +136,20 @@ const commentsSchema = v.object({
     ),
   ),
 
-  privacyPolicyAccepted: v.literal(
-    true,
-    "Debes aceptar la política de privacidad",
+  privacyPolicyAccepted: v.pipe(
+    v.boolean(),
+    v.check(
+      (value) => value === true,
+      "Debes aceptar la política de privacidad",
+    ),
   ),
-  termsAccepted: v.literal(true, "Debes aceptar los términos y condiciones"),
+  termsAccepted: v.pipe(
+    v.boolean(),
+    v.check(
+      (value) => value === true,
+      "Debes aceptar los términos y condiciones",
+    ),
+  ),
 });
 
 const baseQuoteSchema = v.object({
