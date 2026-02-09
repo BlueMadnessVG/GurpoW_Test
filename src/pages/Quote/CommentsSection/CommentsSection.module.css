@@ -1,0 +1,85 @@
+.commentsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-top: 1.5rem;
+  width: 100%;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sectionHeader h1 {
+  font-family: var(--font-secondary);
+  font-weight: 800;
+  font-style: italic;
+  color: #ff0000;
+  font-size: 2.2rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.sectionHeader span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 0.1rem;
+}
+
+.commentsSection_mainframe {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 12px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .commentSection {
+    padding-top: 2.5rem;
+    gap: 0.5rem;
+  }
+
+  .sectionHeader h1 {
+    font-size: 2.9rem;
+  }
+
+  .sectionHeader h1 {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px; /* space between text and lines */
+  }
+
+  .sectionHeader h1::before,
+  .sectionHeader h1::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 120px;
+    height: 1px;
+    background-color: #ff0000;
+    transform: translateY(-50%);
+  }
+
+  .sectionHeader h1::before {
+    right: 100%;
+    margin-right: 20px;
+  }
+
+  .sectionHeader h1::after {
+    left: 100%;
+    margin-left: 20px;
+  }
+
+  .sectionHeader span {
+    font-size: 10px;
+    letter-spacing: 4px;
+  }
+}
