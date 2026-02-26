@@ -6,11 +6,9 @@ import { SnackbarProvider } from "notistack";
 import { ModalProvider } from "@/context/modal.context.tsx";
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <SnackbarProvider>
-      <ModalProvider>
-        <App />
-      </ModalProvider>
-    </SnackbarProvider>
-  </StrictMode>,
+  <SnackbarProvider>
+    <ModalProvider>
+      <App />
+    </ModalProvider>
+  </SnackbarProvider>,
 );

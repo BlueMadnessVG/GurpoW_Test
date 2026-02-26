@@ -11,7 +11,6 @@ interface HeaderProps {
 
 function Header({ showNav = false, showUserMenu = false }: HeaderProps) {
   const isTabletOrLarger = useIsTabletOrLarger();
-  console.log(isTabletOrLarger)
   const shouldShowNav = showNav && isTabletOrLarger;
 
   return (
