@@ -1,34 +1,9 @@
 import { navigationItems } from "@/utils/constants/navigation.constants";
 import NavLink from "@/components/navigation/NavLink/NavLink";
 import styles from "./Navigation.module.css";
-import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 function Navigation() {
-  const breakpoints = {
-    desktop: useMediaQuery({ query: "(min-width: 1024px)" }),
-    tablet: useMediaQuery({
-      query: "(min-width: 768px) and (max-width: 1023px)",
-    }),
-    mobile: useMediaQuery({ query: "(max-width: 767px)" }),
-  };
-
-  const itemsToRemove = {
-    desktop: 0,
-    tablet: 1,
-    mobile: 2,
-  };
-
-  const currentBreakpoint = breakpoints.desktop
-    ? "desktop"
-    : breakpoints.tablet
-      ? "tablet"
-      : "mobile";
-
-  const itemsToRemoveCount = itemsToRemove[currentBreakpoint];
-  const filteredItems = navigationItems.slice(
-    1,
-    -itemsToRemoveCount || undefined,
-  );
+  const filteredItems = navigationItems.slice(1);
 
   return (
     <nav className={styles.navigation}>

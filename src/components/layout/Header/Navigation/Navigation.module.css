@@ -6,7 +6,7 @@
 
 .navigation_list {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -35,9 +35,5 @@
 @media (min-width: 1024px) {
   .navigation {
     gap: 2rem; 
-  }
-  
-  .navigation_list {
-    gap: 3rem; 
   }
 }
