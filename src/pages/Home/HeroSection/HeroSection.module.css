@@ -1,0 +1,58 @@
+.HeroSection__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 3rem 1rem;
+  min-height: 45vh;
+}
+
+.HeroSection__video {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 80px);
+  object-fit: cover;
+  z-index: -2;
+}
+
+.HeroSection__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.25));
+  z-index: -1;
+}
+
+.HeroSection__content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  text-align: center;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .HeroSection__container {
+    min-height: 50vh;
+    padding: 3.5rem 1.5rem;
+  }
+
+  .HeroSection__video {
+    top: -100px;
+    height: calc(100% + 100px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .HeroSection__container {
+    min-height: 80vh;
+    padding: 4rem 2rem;
+  }
+
+  .HeroSection__video {
+    top: -120px;
+    height: calc(100% + 120px);
+  }
+}

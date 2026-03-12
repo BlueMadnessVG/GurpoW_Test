@@ -2,11 +2,21 @@
   position: sticky;
   top: 0;
   z-index: 2000;
-  background: white;
+
   font-family: var(--font-secondary);
-  border-bottom: 1px solid #e5e7eb;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(229, 231, 235, 0.6);
+
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+
+  transition:
+    background 0.3s ease,
+    backdrop-filter 0.3s ease;
 }
 
 .header_container {
@@ -56,7 +66,6 @@
     padding: 0 6rem;
   }
 }
-
 
 @supports (-webkit-touch-callout: none) {
   .header {
