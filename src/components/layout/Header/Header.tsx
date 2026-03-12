@@ -3,6 +3,7 @@ import Logo from "./Logo/Logo";
 import Navigation from "./Navigation/Navigation";
 import MobileMenu from "./MobileMenu/MobileMenu";
 import { useIsDesktop } from "@/hooks/useMediaQuery";
+import UserMenu from "./UserMenu/UserMenu";
 
 interface HeaderProps {
   showNav?: boolean;
@@ -22,9 +23,7 @@ function Header({ showNav = false, showUserMenu = false }: HeaderProps) {
         </div>
 
         {shouldShowNav && <Navigation />}
-        <div>
-          <span>Login button</span>
-        </div>
+        <UserMenu />
       </div>
     </header>
   );

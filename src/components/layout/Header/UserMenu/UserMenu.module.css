@@ -1,0 +1,56 @@
+.UserMenu__container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.UserMenu__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.45rem;
+
+  border: none;
+  background: transparent;
+
+  color: inherit;
+  cursor: pointer;
+
+  border-radius: 6px;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.UserMenu__icon {
+  font-size: 1.3rem;
+  display: flex;
+}
+
+.UserMenu__button:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+.UserMenu__icon_account {
+  background-color: #ff2d2d;
+  color: white;
+  border-radius: 999px;
+}
+
+.UserMenu__icon_account:hover {
+  background-color: #ff4444;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.UserMenu__button:active {
+  transform: scale(0.92);
+}
+
+.UserMenu__button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.6);
+}
