@@ -5,7 +5,7 @@
   justify-content: center;
   overflow: hidden;
   padding: 3rem 1rem;
-  min-height: 45vh;
+  min-height: 85vh;
 }
 
 .HeroSection__video {
@@ -27,15 +27,123 @@
 
 .HeroSection__content {
   position: relative;
-  z-index: 1;
-  max-width: 800px;
+  z-index: 2;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  gap: 1.5rem;
   color: white;
+}
+
+.HeroSection__title {
+  font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.HeroSection__subtitle {
+  max-width: 600px;
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+.HeroSection__specs {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.HeroSection__spec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.HeroSection__specValue {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.HeroSection__specLabel {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.HeroSection__actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.HeroSection__primaryBtn {
+  padding: 0.9rem 1.8rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  background: #ff2d2d;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.HeroSection__primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.HeroSection__secondaryBtn {
+  padding: 0.9rem 1.8rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.HeroSection__secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.HeroSection__models {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.HeroSection__modelsLabel {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.HeroSection__modelList {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.HeroSection__modelList button {
+  padding: 0.35rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.HeroSection__modelList button:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 @media (min-width: 768px) {
   .HeroSection__container {
-    min-height: 50vh;
     padding: 3.5rem 1.5rem;
   }
 
@@ -43,16 +151,23 @@
     top: -100px;
     height: calc(100% + 100px);
   }
+
+  .HeroSection__specs {
+    gap: 3rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .HeroSection__container {
-    min-height: 80vh;
     padding: 4rem 2rem;
   }
 
   .HeroSection__video {
     top: -120px;
     height: calc(100% + 120px);
+  }
+
+  .HeroSection__content {
+    gap: 2rem;
   }
 }
